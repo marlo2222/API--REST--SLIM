@@ -72,6 +72,7 @@ class ComposerStaticInitcb77ce58b546bb788e09e6839fb7558c
     );
 
     public static $classMap = array (
+        'App\\Controllers\\CategoriaController' => __DIR__ . '/../..' . '/App/Controllers/CategoriaController.php',
         'App\\Controllers\\ProductController' => __DIR__ . '/../..' . '/App/Controllers/ProductController.php',
         'FastRoute\\BadRouteException' => __DIR__ . '/..' . '/nikic/fast-route/src/BadRouteException.php',
         'FastRoute\\DataGenerator' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator.php',
