@@ -9,7 +9,7 @@ final class ProductController{
     
     public function getProducts(Resquest $request, Response $response, array $args)
     {
-        return $response;    
+        return $response->getBody()->write("deu certo");    
     }
     public function insertProduct(Resquest $request, Response $response, array $args)
     {
