@@ -9,23 +9,23 @@ use App\Models\CategoriaModel;
 
 final class CategoriaController
 {
-    public function getCategoria(Resquest $request, Response $response, array $args){
+    public function getCategoria(Resquest $request, Response $response, array $args)
+    {
         $categoriaDao = new categoriaDAO();
         $categoria = $categoriaDao->getAllCategoria();
         $response = $response->withJson([$categoria], 200);
         return $response;
     }
     public function insertCategoria(Resquest $request, Response $response, array $args)
-    {
+    {	
         $data = $request->getParsedBody();
-
+		
         $categoriaDao = new categoriaDAO();
-        $categoria = new CategoriaModel();
-        $categoria->setNome($data['nome']);
+        //$categoria = new CategoriaModel();
+		//$categoria->setNome($data['nome']);
+        $categoriaDao->insertCategoria($data);
 
-        $categoriaDao->insertCategoria($categoria);
-
-        $response = $response->withJson(['message' => 'categoria inserida com sucesso', 200]);
+        $response = $response->withJson(['message' => 'categoria inserida com sucesso'], 200);
         return $response;
     }
     public function updateCategoria(Resquest $request, Response $response, array $args)
@@ -35,6 +35,10 @@ final class CategoriaController
     }
     public function deleteCategoria(Resquest $request, Response $response, array $args)
     {
+        $data = $request->getParsedBody();
+        $categoriaDao = new categoriaDAO();
+        $categoriaDao->deleteCategoria($data);
+        $response = $response->withJson(['message' => 'categoria removida com sucesso'], 200);
         return $response;
     }
 }

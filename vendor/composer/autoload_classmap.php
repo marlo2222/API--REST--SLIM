@@ -11,6 +11,7 @@ return array(
     'App\\DAO\\Config' => $baseDir . '/App/DAO/config.php',
     'App\\DAO\\categoriaDAO' => $baseDir . '/App/DAO/CategoriaDAO.php',
     'App\\Models\\CategoriaModel' => $baseDir . '/App/Models/CategoriaModel.php',
+    'App\\dao\\Conexao' => $baseDir . '/App/DAO/Conexao.php',
     'FastRoute\\BadRouteException' => $vendorDir . '/nikic/fast-route/src/BadRouteException.php',
     'FastRoute\\DataGenerator' => $vendorDir . '/nikic/fast-route/src/DataGenerator.php',
     'FastRoute\\DataGenerator\\CharCountBased' => $vendorDir . '/nikic/fast-route/src/DataGenerator/CharCountBased.php',

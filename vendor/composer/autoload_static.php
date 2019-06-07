@@ -77,6 +77,7 @@ class ComposerStaticInitcb77ce58b546bb788e09e6839fb7558c
         'App\\DAO\\Config' => __DIR__ . '/../..' . '/App/DAO/config.php',
         'App\\DAO\\categoriaDAO' => __DIR__ . '/../..' . '/App/DAO/CategoriaDAO.php',
         'App\\Models\\CategoriaModel' => __DIR__ . '/../..' . '/App/Models/CategoriaModel.php',
+        'App\\dao\\Conexao' => __DIR__ . '/../..' . '/App/DAO/Conexao.php',
         'FastRoute\\BadRouteException' => __DIR__ . '/..' . '/nikic/fast-route/src/BadRouteException.php',
         'FastRoute\\DataGenerator' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator.php',
         'FastRoute\\DataGenerator\\CharCountBased' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator/CharCountBased.php',

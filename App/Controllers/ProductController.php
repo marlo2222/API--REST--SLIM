@@ -7,21 +7,23 @@ use Psr\Http\Message\ResponseInterface  as Response;
 
 final class ProductController{
     
-    public function getProducts(Resquest $request, Response $response, array $args)
+    public function getProduto(Resquest $request, Response $response, array $args)
     {
         return $response->getBody()->write("deu certo");    
     }
-    public function insertProduct(Resquest $request, Response $response, array $args)
+    public function insertProduto(Resquest $request, Response $response, array $args)
+    {
+		$data = $request->getParsedBody();
+		$produtoModel = new ProdutoModel();
+        
+        return $response;    
+    }
+    public function updateProduto(Resquest $request, Response $response, array $args)
     {
         
         return $response;    
     }
-    public function updateProduct(Resquest $request, Response $response, array $args)
-    {
-        
-        return $response;    
-    }
-    public function deleteProduct(Resquest $request, Response $response, array $args)
+    public function deleteProduto(Resquest $request, Response $response, array $args)
     {
         return $response;    
     }
